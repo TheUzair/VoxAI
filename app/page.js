@@ -4,11 +4,11 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+
 const fetchAgents = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/agents", {
-      cache: "no-store",
-    });
+    const res = await fetch(`${apiUrl}/api/agents`);
 
     if (!res.ok) {
       throw new Error(`Failed to fetch agents: ${res.statusText}`);
