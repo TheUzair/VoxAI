@@ -15,7 +15,7 @@ const CalendarSidebar = () => {
             Add New Event
           </Button>
           <Button className="w-full" variant="outline">
-            View Today's Schedule
+            View Today&pos;s Schedule
           </Button>
         </div>
       </div>
